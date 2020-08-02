@@ -1,0 +1,238 @@
+
+h2 = document.querySelector("h2");
+h1 = document.querySelector("h1");
+menu = document.querySelector(".menu");
+container = document.querySelector(".container");
+h3 = document.querySelector("h3");
+menuStatus = 'closed';
+catColorSelected = "white";
+catColorUnselected = "rgb(189, 189, 189)";
+
+
+function closeMenu()
+{
+    // h2 styling
+    h2.style.top = "200px";
+    h2.style.left = "60%";
+    h2.style.transform = "translateX(-50%)";
+    h2.style.fontSize = "70px";
+    h2.style.transition = "1s ease-in-out";
+    h2.style.textShadow = "5px 5px 5px rgba(0, 0, 0, 0.281)";
+
+    // h1 styling
+    h1.style.top = "300px";
+    h1.style.left = "50%";
+    h1.style.transform = "translateX(-50%)";
+    h1.style.fontSize = "80px";
+    h1.style.transition = "1s ease-in-out";
+    h1.style.textShadow = "5px 5px 5px rgba(0, 0, 0, 0.281)";
+
+    // menu styling
+    menu.style.top = "60%";
+    menu.style.transform = "translate(-50%, -50%)";
+    menu.style.transition = "1s ease-in-out";
+}
+
+function openMenu()
+{
+    // h2 styling
+    h2.style.top = "100px";
+    h2.style.left = "743px";
+    h2.style.transform = "none";
+    h2.style.fontSize = "40px";
+    h2.style.transition = "1s ease-in-out";
+    h2.style.textShadow = "5px 5px 5px rgba(0, 0, 0, 0.1)";
+
+    // h1 styling
+    h1.style.top = "135px";
+    h1.style.left = "400px";
+    h1.style.transform = "none";
+    h1.style.fontSize = "60px";
+    h1.style.transition = "1s ease-in-out";
+    h1.style.textShadow = "5px 5px 5px rgba(0, 0, 0, 0.1)";
+
+    // menu styling
+    menu.style.top = "260px";
+    menu.style.transform = "translateX(-50%)";
+    menu.style.transition = "1s ease-in-out";
+}
+
+function catDeselect() //use this function before calling catSelect()
+{
+    document.getElementsByTagName("li")[0].style.color = catColorUnselected;
+    document.getElementsByTagName("li")[0].style.borderBottomColor = catColorUnselected;
+    
+    document.getElementsByTagName("li")[1].style.color = catColorUnselected;
+    document.getElementsByTagName("li")[1].style.borderBottomColor = catColorUnselected;
+    
+    document.getElementsByTagName("li")[2].style.color = catColorUnselected;
+    document.getElementsByTagName("li")[2].style.borderBottomColor = catColorUnselected;
+    
+    document.getElementsByTagName("li")[3].style.color = catColorUnselected;
+    document.getElementsByTagName("li")[3].style.borderBottomColor = catColorUnselected;
+}
+
+function catSelect() //use this function after calling catDeselect()
+{
+    document.getElementById(menuStatus).style.color = catColorSelected;
+    document.getElementById(menuStatus).style.borderBottomColor = catColorSelected;
+}
+
+function loadDesign()
+{
+    unloadSpecs();
+    unloadHistory();
+    unloadFigures();
+    catDeselect();
+    catSelect();
+    // 
+}
+
+function loadSpecs()
+{
+    unloadDesign();
+    unloadHistory();
+    unloadFigures();
+    catDeselect();
+    catSelect();
+    // 
+    // container.style.display = "block";
+    container.style.height = "500px";
+    container.style.top = "280px";
+    container.style.opacity = 1;
+    container.style.transition = "1.5s ease-in-out"
+}
+
+function loadHistory()
+{
+    unloadDesign();
+    unloadSpecs();
+    unloadFigures();
+    catDeselect();
+    catSelect();
+    // 
+}
+
+function loadFigures()
+{
+    unloadDesign();
+    unloadSpecs();
+    unloadHistory();
+    catDeselect();
+    catSelect();
+    // 
+}
+
+function unloadDesign()
+{
+
+}
+
+function unloadSpecs()
+{
+    container.style.height = "0px";
+    container.style.top = "500px";
+    container.style.opacity = 0;
+    container.style.transition = "0.5s ease-in-out"
+}
+
+function unloadHistory()
+{
+    
+}
+
+function unloadFigures()
+{
+    
+}
+
+function unloadAll()
+{
+    unloadDesign();
+    unloadSpecs();
+    unloadHistory();
+    unloadFigures();
+}
+
+function btnClick(category)
+{    
+    // h2.style.backgroundColor = "purple";
+    // h1.style.backgroundColor = "hotpink";
+    // menu.style.backgroundColor = "green";
+
+    
+
+    // alert(menuStatus);
+
+    if (menuStatus == 'closed')
+    {
+        openMenu();
+        menuStatus = category; //this variable can be accessed in order to determine which category is opened (if any) as well as to pass the name of the opened category directly inside the catSelect() function
+        // alert(menuStatus);
+
+        switch(category) { //update the menuStatus variable and then load the opened page with the appropriate sub-view
+            case 'design':
+                loadDesign();
+            break;
+            case 'specs':
+                loadSpecs();
+            break;
+            case 'history':
+                loadHistory();
+            break;
+            case 'figures':
+                loadFigures();
+            break;
+            default:
+                // code block
+            break;
+        }
+    }
+
+    else if (menuStatus != 'closed')
+    {
+        // alert ('menuStatus ='+menuStatus+' and category = '+category);
+        if (category == menuStatus)
+        {
+            menuStatus = 'closed';
+            catDeselect();
+
+            unloadAll();
+
+            closeMenu();
+        }   
+        
+        // alert('menuStatus != closed');
+        else if (category != menuStatus)
+        {
+            // openMenu();
+            // menuStatus = category; //this variable can be accessed in order to determine which category is opened (if any) as well as to pass the name of the opened category directly inside the catSelect() function
+            // alert(menuStatus);
+            // alert ('menuStatus ='+menuStatus+' and category = '+category);
+
+            switch(category) { //update the menuStatus variable and then load the opened page with the appropriate sub-view
+                case 'design':
+                    menuStatus = category;
+                    loadDesign();
+                break;
+                case 'specs':
+                    menuStatus = category;
+                    loadSpecs();
+                break;
+                case 'history':
+                    menuStatus = category;
+                    // alert ('menuStatus ='+menuStatus+' and category = '+category);
+                    loadHistory();
+                    // alert('loaded history');
+                break;
+                case 'figures':
+                    menuStatus = category;
+                    loadFigures();
+                break;
+                default:
+                    // code block
+                break;
+            }
+        }
+    }
+}

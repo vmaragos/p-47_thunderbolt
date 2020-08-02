@@ -1,0 +1,143 @@
+body
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(37, 127, 211);
+}
+
+
+/* before clicking a category */
+
+h2
+{
+    position: absolute;
+    top: 200px;
+    left: 60%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    font-size: 70px;
+    font-family: 'Red Rose', cursive;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.281);
+}
+
+h1
+{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    font-size: 80px;
+    font-family: 'Red Rose', cursive;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.281);
+}
+
+.menu
+{
+    position: relative;
+	background-color: transparent;
+	top: 60%;
+	left: 50%;
+	width: 80%;
+	height: 60px;
+	transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul
+{
+    position: relative;
+    width: 90%;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.menu li
+{
+	list-style-type: none;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: 20px;
+    color: rgb(189, 189, 189);
+    padding: 10px 20px 5px 20px;
+    border: 2px solid transparent;
+    border-bottom-color: rgb(189, 189, 189);
+    border-radius: 3.5px;
+    transition: 0.1s ease-out;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 4px;
+    cursor: pointer;
+    
+}
+
+.menu li:hover
+{
+    color: white;
+    border-bottom-color: white;
+    transition: 0.1s ease-out;
+}
+
+
+/* after clicking a category */
+/* h2
+{
+    position: absolute;
+    top: 100px;
+    left: 743px;
+    transform: none;
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Red Rose', cursive;
+}
+
+h1
+{
+    position: absolute;
+    top: 130px;
+    left: 400px;
+    transform: none;
+    color: whitesmoke;
+    font-size: 60px;
+    font-family: 'Red Rose', cursive;
+}
+
+.menu
+{
+	position: relative;
+	background-color: transparent;
+	top: 260px;
+	left: 50%;
+	width: 80%;
+	height: 60px;
+	transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+} */
+
+.container
+{
+    position: relative;
+    top: 500px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60%;
+    height: 0px;
+    background-color: white;
+    opacity: 0;
+    z-index: -1;
+}
+
+h3
+{
+
+}
+
