@@ -1,4 +1,5 @@
 
+body = document.querySelector("body");
 h2 = document.querySelector("h2");
 h1 = document.querySelector("h1");
 menu = document.querySelector(".menu");
@@ -7,6 +8,7 @@ h3 = document.querySelector("h3");
 menuStatus = 'closed';
 catColorSelected = "white";
 catColorUnselected = "rgb(189, 189, 189)";
+backgroundInitial = "rgb(37, 127, 211)";
 
 
 function closeMenu()
@@ -86,6 +88,8 @@ function loadDesign()
     catDeselect();
     catSelect();
     // 
+    body.style.backgroundColor = "rgb(117, 111, 26)";
+    body.style.transition = "5s ease-in-out";
 }
 
 function loadSpecs()
@@ -101,6 +105,9 @@ function loadSpecs()
     container.style.top = "280px";
     container.style.opacity = 1;
     container.style.transition = "1.5s ease-in-out"
+
+    body.style.backgroundColor = "rgb(103, 50, 138)";
+    body.style.transition = "5s ease-in-out";
 }
 
 function loadHistory()
@@ -111,6 +118,9 @@ function loadHistory()
     catDeselect();
     catSelect();
     // 
+        
+    body.style.backgroundColor = "rgb(46, 131, 82)";
+    body.style.transition = "5s ease-in-out";
 }
 
 function loadFigures()
@@ -121,11 +131,16 @@ function loadFigures()
     catDeselect();
     catSelect();
     // 
+    
+    body.style.backgroundColor = "rgb(82, 39, 33)";
+    body.style.transition = "5s ease-in-out";
 }
 
 function unloadDesign()
 {
-
+    
+    body.style.backgroundColor = backgroundInitial;
+    body.style.transition = "3s ease-in-out";
 }
 
 function unloadSpecs()
@@ -134,16 +149,24 @@ function unloadSpecs()
     container.style.top = "500px";
     container.style.opacity = 0;
     container.style.transition = "0.5s ease-in-out"
+    
+    body.style.backgroundColor = backgroundInitial;
+    body.style.transition = "3s ease-in-out";
+
 }
 
 function unloadHistory()
 {
-    
+        
+    body.style.backgroundColor = backgroundInitial;
+    body.style.transition = "3s ease-in-out";
 }
 
 function unloadFigures()
 {
     
+    body.style.backgroundColor = backgroundInitial;
+    body.style.transition = "3s ease-in-out";
 }
 
 function unloadAll()
