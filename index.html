@@ -19,9 +19,60 @@
             <li id="figures" onclick="btnClick('figures')">Figures</li>
         </ul>
     </div>
+    <!-- <div class="photo-container">
+        <ul id="scene">
+            <li class="layer" data-depth="0">
+                <img src="./images/cloud1.svg" alt="">
+            </li>
+            <li class="layer" data-depth="0">
+                <img src="./images/p47_full_transparent.png" alt="">
+            </li>
+            <li class="layer" data-depth="0">
+                <img src="./images/cloud1.svg" alt="">
+            </li>
+        </ul>
+    </div> -->
     <div class="container">
-        <h3>Container</h3>
+        <div class="design">
+
+        </div>
+        <div class="specs">
+
+        </div>
+        <div class="history">
+
+        </div>
+        <div class="figures">
+
+        </div>
     </div>
     <script type="text/javascript" src="./js/index.js"></script>
+    <!-- <script type="text/javascript" src="./js/parallax.js"></script>
+    <script type="text/javascript" >
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+
+    </script> -->
+
+    <!-- preloader start -->
+
+    <div id="preloader-wrapper">
+        <div id="preloader">
+            <div class="loader" id="loader-1"></div>
+            <div class="loader" id="loader-2"></div> 
+            <div class="loader" id="loader-3"></div> 
+            <div class="loader" id="loader-4"></div> 
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>    
+        $(window).on("load",function(){
+            $("#preloader-wrapper").delay(500).fadeOut("slow");
+        });
+    </script>
+    
+    <!-- preloader end -->
+    
 </body>
 </html>

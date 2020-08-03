@@ -141,8 +141,125 @@ h1
     z-index: -1;
 }
 
-h3
-{
+/* preloader start */
+body {
+    background-color: #3298DA;
+    overflow: hidden;
+  }
+  
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+  }
+/* preloader end */
 
+
+/* preloader */
+
+#preloader-wrapper
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+	background-image: linear-gradient(135deg, rgb(59, 137, 238), rgb(55, 199, 224), rgb(36, 128, 233));
+	z-index: 10;
 }
+
+#preloader
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  /* background-image: url(../images/previewfile_1430030161.jpg); */
+  background-size: cover;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+#loader-1
+{  
+  top: 50px;
+  left: 50px;
+  width: 150px;
+  height: 150px;
+  border: 10px solid rgba(208, 229, 235, 0.9);
+  border-left: 10px solid rgba(26, 130, 199, 0.9);
+  /* border-bottom: 25px solid rgba(69, 79, 223, 0.9); */
+  animation: spin 2s linear infinite;
+}
+
+#loader-2
+{  
+  top: 60px;
+  left: 60px;
+  width: 130px;
+  height: 130px;
+  border: 10px solid rgba(208, 229, 235, 0.8);
+  border-left: 10px solid rgba(26, 130, 199, 0.8);
+  /* border-bottom: 25px solid rgba(219, 216, 52, 0.8); */
+  animation: spin 1.8s linear infinite;
+}
+
+#loader-3
+{
+  top: 70px;
+  left: 70px;
+  width: 110px;
+  height: 110px;
+  border: 10px solid rgba(208, 229, 235, 0.7);
+  border-left: 10px solid rgba(26, 130, 199, 0.7);
+  /* border-bottom: 25px solid rgba(219, 71, 52, 0.7); */
+  animation: spin 1.6s linear infinite;
+}
+
+#loader-4
+{
+  top: 80px;
+  left: 80px;
+  width: 90px;
+  height: 90px;
+  border: 10px solid rgba(208, 229, 235, 0.6);
+  border-left: 10px solid rgba(26, 130, 199, 0.6);
+  /* border-bottom: 25px solid rgba(172, 52, 219, 0.6); */
+  animation: spin 1.4s linear infinite;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* front page parallax */
+
+/* .photo-container
+{
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+    background-color: gray;
+    background-attachment: fixed;
+} */
 
