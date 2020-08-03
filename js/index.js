@@ -145,13 +145,16 @@ function loadHistory()
     body.style.transition = "5s ease-in-out";
 
 
+    container.style.overflow = "visible";
     container.style.height = "500px";
     container.style.top = "280px";
     container.style.opacity = 1;
     container.style.transition = "1.5s ease-in-out"
 
+
+    // history.style.overflow = "visible";
     historyBox.style.zIndex = "3";
-    historyBox.style.backgroundColor = "green";
+    // historyBox.style.backgroundColor = "green";
     historyBox.style.height = "100%";
     historyBox.style.opacity = "1";
     historyBox.style.transition = "2s ease-in-out";
@@ -193,7 +196,7 @@ function unloadDesign()
     body.style.transition = "3s ease-in-out";
 
     designBox.style.zIndex = "1";
-    designBox.style.backgroundColor = "white";
+    // designBox.style.backgroundColor = "white";
     designBox.style.height = "0%";
     designBox.style.opacity = "0";
     designBox.style.transition = "2s ease-in-out";
@@ -210,7 +213,7 @@ function unloadSpecs()
     body.style.transition = "3s ease-in-out";
     
     specsBox.style.zIndex = "1";
-    specsBox.style.backgroundColor = "white";
+    // specsBox.style.backgroundColor = "white";
     specsBox.style.height = "0%";
     specsBox.style.opacity = "0";
     specsBox.style.transition = "2s ease-in-out";
@@ -223,12 +226,13 @@ function unloadHistory()
     container.style.top = "500px";
     container.style.opacity = 0;
     container.style.transition = "0.5s ease-in-out"
+    container.style.overflow = "hidden";
 
     body.style.backgroundColor = backgroundInitial;
     body.style.transition = "3s ease-in-out";
 
     historyBox.style.zIndex = "1";
-    historyBox.style.backgroundColor = "white";
+    // historyBox.style.backgroundColor = "white";
     historyBox.style.height = "0%";
     historyBox.style.opacity = "0";
     historyBox.style.transition = "2s ease-in-out";
@@ -245,7 +249,7 @@ function unloadFigures()
     body.style.transition = "3s ease-in-out";
     
     figuresBox.style.zIndex = "1";
-    figuresBox.style.backgroundColor = "white";
+    // figuresBox.style.backgroundColor = "white";
     figuresBox.style.height = "0%";
     figuresBox.style.opacity = "0";
     figuresBox.style.transition = "2s ease-in-out";
