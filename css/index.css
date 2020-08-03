@@ -27,6 +27,7 @@ h2
     color: whitesmoke;
     font-size: 70px;
     font-family: 'Red Rose', cursive;
+    letter-spacing: 1px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.281);
 }
 
@@ -39,6 +40,7 @@ h1
     color: whitesmoke;
     font-size: 80px;
     font-family: 'Red Rose', cursive;
+    letter-spacing: 5px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.281);
 }
 
@@ -263,3 +265,18 @@ body {
     background-attachment: fixed;
 } */
 
+/* sub-views/categories */
+
+
+/* history */
+
+.history, .design, .specs, .figures
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 1;
+}
