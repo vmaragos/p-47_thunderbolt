@@ -13,6 +13,7 @@ historyBox = document.querySelector(".history");
 designBox = document.querySelector(".design");
 specsBox = document.querySelector(".specs");
 figuresBox = document.querySelector(".figures");
+backgroundImg = document.querySelector(".background-img");
 
 
 function closeMenu()
@@ -37,6 +38,18 @@ function closeMenu()
     menu.style.top = "60%";
     menu.style.transform = "translate(-50%, -50%)";
     menu.style.transition = "1s ease-in-out";
+
+    
+    //background-img styling
+    backgroundImg.style.top = "50%";
+    backgroundImg.style.left = "50%";
+    backgroundImg.style.transform = "translate(-50%, -50%) rotate(0deg)";
+    backgroundImg.style.width = "50%";
+    backgroundImg.style.height = "50%";
+    backgroundImg.style.opacity = "0.1";
+    backgroundImg.style.transition = "1s ease-in-out";
+    // backgroundImg.style.zIndex = "1";
+
 }
 
 function openMenu()
@@ -61,6 +74,16 @@ function openMenu()
     menu.style.top = "260px";
     menu.style.transform = "translateX(-50%)";
     menu.style.transition = "1s ease-in-out";
+    
+    //background-img styling
+    backgroundImg.style.top = "20%";
+    backgroundImg.style.left = "70%";
+    backgroundImg.style.transform = "translate(-50%, -50%) rotate(-10deg)";
+    backgroundImg.style.width = "20%";
+    backgroundImg.style.height = "20%";
+    backgroundImg.style.opacity = "0.8";
+    backgroundImg.style.transition = "1.5s ease-in-out";
+    // backgroundImg.style.zIndex = "1";
 }
 
 function catDeselect() //use this function before calling catSelect()
