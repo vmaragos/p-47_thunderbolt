@@ -230,7 +230,7 @@ h1
     /* background-color: rgb(175, 22, 175); */
 }
 
-.design-background
+.design-background, .history-background
 {
     position: absolute;
     top: 50%;
@@ -244,6 +244,11 @@ h1
     background: url("../images/design1_transparent.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.history-background
+{
+    background-image: url("../images/design3.jpg");
 }
 
 

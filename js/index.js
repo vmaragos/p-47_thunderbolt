@@ -131,6 +131,14 @@ function loadHistory()
     historyBox.style.height = "100%";
     historyBox.style.opacity = "1";
     historyBox.style.transition = "2s ease-in-out";
+    
+    historyImg = document.querySelector(".history-background");
+    historyImg.style.left = "50%";
+    historyImg.style.top = "110%";
+    historyImg.style.height = "200%";
+    historyImg.style.width = "140%";
+    historyImg.style.opacity = "0.3";
+    historyImg.style.transition = "1s ease-in-out";
 }
 
 function loadDesign()
@@ -159,11 +167,11 @@ function loadDesign()
     designBox.style.transition = "2s ease-in-out";
     
     designImg = document.querySelector(".design-background");
-    designImg.style.left = "40%";
+    designImg.style.left = "45%";
     designImg.style.top = "120%";
     designImg.style.height = "180%";
     designImg.style.width = "100%";
-    designImg.style.opacity = "0.15";
+    designImg.style.opacity = "0.3";
     designImg.style.transition = "1s ease-in-out";
 
 }
@@ -234,12 +242,12 @@ function unloadDesign()
     designBox.style.opacity = "0";
     designBox.style.transition = "2s ease-in-out";
     
-    // designImg = document.querySelector(".design-background");
-    // designImg.style.top = "180%";
-    // designImg.style.height = "60%";
-    // designImg.style.width = "30%";
-    // designImg.style.opacity = "0";
-    // designImg.style.transition = "1s ease-in-out";
+    designImg = document.querySelector(".design-background");
+    designImg.style.top = "180%";
+    designImg.style.height = "60%";
+    designImg.style.width = "30%";
+    designImg.style.opacity = "0";
+    designImg.style.transition = "1s ease-in-out";
 }
 
 function unloadSpecs()
@@ -277,6 +285,13 @@ function unloadHistory()
     historyBox.style.height = "0%";
     historyBox.style.opacity = "0";
     historyBox.style.transition = "2s ease-in-out";
+    
+    historyImg = document.querySelector(".history-background");
+    historyImg.style.top = "180%";
+    historyImg.style.height = "60%";
+    historyImg.style.width = "30%";
+    historyImg.style.opacity = "0";
+    historyImg.style.transition = "1s ease-in-out";
 }
 
 function unloadFigures()
