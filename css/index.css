@@ -1,3 +1,9 @@
+
+*
+{
+    user-select: none;
+}
+
 html
 {
     height: 100%;
@@ -174,6 +180,8 @@ h1
 {
     margin-bottom: 70px;
     /* display: none; */
+    user-select: text;
+    z-index: 10;
 }
 
 .history p:nth-child(1), .design p:nth-child(1)
@@ -181,7 +189,7 @@ h1
     margin-top: 100px;
 }
 
-.history p:nth-child(1n+2), .design p:nth-child(1n+2)
+ .history p:nth-child(1n+2), .design p:nth-child(4n+1)
 {
     position: relative;
     max-width: 65%;
@@ -192,7 +200,7 @@ h1
     /* transition: 0.5s ease-in-out; */
 }
 
-.history p:nth-child(4n+1), .design p:nth-child(4n+1)
+ .history p:nth-child(4n+1), .design p:nth-child(4n+3)
 {
     position: relative;
     max-width: 65%;
