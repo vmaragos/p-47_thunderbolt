@@ -107,54 +107,6 @@ function catSelect() //use this function after calling catDeselect()
     document.getElementById(menuStatus).style.borderBottomColor = catColorSelected;
 }
 
-function loadDesign()
-{
-    unloadSpecs();
-    unloadHistory();
-    unloadFigures();
-    catDeselect();
-    catSelect();
-    // 
-    container.style.height = "500px";
-    container.style.top = "280px";
-    container.style.opacity = 1;
-    container.style.transition = "1.5s ease-in-out"
-
-    body.style.backgroundColor = "rgb(117, 111, 26)";
-    body.style.transition = "5s ease-in-out";
-
-    
-    designBox.style.zIndex = "3";
-    designBox.style.backgroundColor = "yellow";
-    designBox.style.height = "100%";
-    designBox.style.opacity = "1";
-    designBox.style.transition = "2s ease-in-out";
-}
-
-function loadSpecs()
-{
-    unloadDesign();
-    unloadHistory();
-    unloadFigures();
-    catDeselect();
-    catSelect();
-    // 
-    // container.style.display = "block";
-    container.style.height = "500px";
-    container.style.top = "280px";
-    container.style.opacity = 1;
-    container.style.transition = "1.5s ease-in-out"
-
-    body.style.backgroundColor = "rgb(103, 50, 138)";
-    body.style.transition = "5s ease-in-out";
-
-    specsBox.style.zIndex = "3";
-    specsBox.style.backgroundColor = "purple";
-    specsBox.style.height = "100%";
-    specsBox.style.opacity = "1";
-    specsBox.style.transition = "2s ease-in-out";
-}
-
 function loadHistory()
 {
     unloadDesign();
@@ -174,15 +126,71 @@ function loadHistory()
     container.style.opacity = 1;
     container.style.transition = "1.5s ease-in-out"
 
-
-    // history.style.overflow = "visible";
     historyBox.style.zIndex = "3";
     // historyBox.style.backgroundColor = "green";
     historyBox.style.height = "100%";
     historyBox.style.opacity = "1";
     historyBox.style.transition = "2s ease-in-out";
+}
 
-        
+function loadDesign()
+{
+    unloadSpecs();
+    unloadHistory();
+    unloadFigures();
+    catDeselect();
+    catSelect();
+    // 
+    
+    container.style.overflow = "visible";
+    container.style.height = "500px";
+    container.style.top = "280px";
+    container.style.opacity = 1;
+    container.style.transition = "1.5s ease-in-out"
+
+    body.style.backgroundColor = "rgb(117, 111, 26)";
+    body.style.transition = "5s ease-in-out";
+
+    
+    designBox.style.zIndex = "3";
+    // designBox.style.backgroundColor = "yellow";
+    designBox.style.height = "100%";
+    designBox.style.opacity = "1";
+    designBox.style.transition = "2s ease-in-out";
+    
+    designImg = document.querySelector(".design-background");
+    designImg.style.left = "40%";
+    designImg.style.top = "120%";
+    designImg.style.height = "180%";
+    designImg.style.width = "100%";
+    designImg.style.opacity = "0.15";
+    designImg.style.transition = "1s ease-in-out";
+
+}
+
+function loadSpecs()
+{
+    unloadDesign();
+    unloadHistory();
+    unloadFigures();
+    catDeselect();
+    catSelect();
+    // 
+    // container.style.display = "block";
+    container.style.overflow = "visible";
+    container.style.height = "500px";
+    container.style.top = "280px";
+    container.style.opacity = 1;
+    container.style.transition = "1.5s ease-in-out"
+
+    body.style.backgroundColor = "rgb(103, 50, 138)";
+    body.style.transition = "5s ease-in-out";
+
+    specsBox.style.zIndex = "3";
+    specsBox.style.backgroundColor = "purple";
+    specsBox.style.height = "100%";
+    specsBox.style.opacity = "1";
+    specsBox.style.transition = "2s ease-in-out";
 }
 
 function loadFigures()
@@ -193,6 +201,7 @@ function loadFigures()
     catDeselect();
     catSelect();
     // 
+    container.style.overflow = "visible";
     container.style.height = "500px";
     container.style.top = "280px";
     container.style.opacity = 1;
@@ -214,6 +223,7 @@ function unloadDesign()
     container.style.top = "500px";
     container.style.opacity = 0;
     container.style.transition = "0.5s ease-in-out"
+    container.style.overflow = "hidden";
     
     body.style.backgroundColor = backgroundInitial;
     body.style.transition = "3s ease-in-out";
@@ -223,6 +233,13 @@ function unloadDesign()
     designBox.style.height = "0%";
     designBox.style.opacity = "0";
     designBox.style.transition = "2s ease-in-out";
+    
+    // designImg = document.querySelector(".design-background");
+    // designImg.style.top = "180%";
+    // designImg.style.height = "60%";
+    // designImg.style.width = "30%";
+    // designImg.style.opacity = "0";
+    // designImg.style.transition = "1s ease-in-out";
 }
 
 function unloadSpecs()
@@ -231,6 +248,7 @@ function unloadSpecs()
     container.style.top = "500px";
     container.style.opacity = 0;
     container.style.transition = "0.5s ease-in-out"
+    container.style.overflow = "hidden";
     
     body.style.backgroundColor = backgroundInitial;
     body.style.transition = "3s ease-in-out";
@@ -267,6 +285,7 @@ function unloadFigures()
     container.style.top = "500px";
     container.style.opacity = 0;
     container.style.transition = "0.5s ease-in-out"
+    container.style.overflow = "hidden";
     
     body.style.backgroundColor = backgroundInitial;
     body.style.transition = "3s ease-in-out";
