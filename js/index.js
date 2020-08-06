@@ -195,7 +195,7 @@ function loadSpecs()
     body.style.transition = "5s ease-in-out";
 
     specsBox.style.zIndex = "3";
-    specsBox.style.backgroundColor = "purple";
+    // specsBox.style.backgroundColor = "purple";
     specsBox.style.height = "100%";
     specsBox.style.opacity = "1";
     specsBox.style.transition = "2s ease-in-out";
