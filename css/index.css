@@ -252,6 +252,10 @@ h1
 
 /* specs */
 
+.specs
+{
+    top: 90px;
+}
 
 table {
     /* font-family: arial, sans-serif; */
@@ -271,6 +275,17 @@ table {
   th
   {
       /* border-top-color: transparent; */
+    padding-top: 100px;
+    padding-bottom: 30px;
+    color: white;
+    padding-left: 50px;
+    letter-spacing: 2px;
+    border-bottom: white 1px solid;
+  }
+
+  tr:nth-child(1) th
+  {
+      padding-top: 0;
   }
 
   td
