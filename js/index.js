@@ -196,7 +196,6 @@ function loadSpecs()
 
     specsBox.style.zIndex = "3";
     // specsBox.style.backgroundColor = "purple";
-    specsBox.style.top = "";
     specsBox.style.height = "100%";
     specsBox.style.opacity = "1";
     specsBox.style.transition = "2s ease-in-out";
@@ -220,7 +219,7 @@ function loadFigures()
     body.style.transition = "5s ease-in-out";
 
     figuresBox.style.zIndex = "3";
-    figuresBox.style.backgroundColor = "brown";
+    // figuresBox.style.backgroundColor = "brown";
     figuresBox.style.height = "100%";
     figuresBox.style.opacity = "1";
     figuresBox.style.transition = "2s ease-in-out";
